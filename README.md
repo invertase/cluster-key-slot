@@ -1,4 +1,4 @@
-Readme To-do.
+Readme to-do.
 
 See npm scripts.
 
