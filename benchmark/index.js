@@ -34,6 +34,14 @@ suite.add('OLD without tags', function () {
   }
 });
 
+suite.add('NEW without tags singular', function () {
+  newGenerate(elems[2]);
+});
+
+suite.add('OLD without tags singular', function () {
+  oldGenerate(elems[2]);
+});
+
 suite.on('cycle', function (event) {
   console.log(String(event.target));
 });

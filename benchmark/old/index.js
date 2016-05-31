@@ -83,7 +83,18 @@ function crc16(str) {
   for (var i = 0, len = buf.length; i < len; i++) {
     crc = (crc << 8) ^ crc16tab[((crc >> 8) ^ buf[i]) & 0x00ff];
   }
-  return crc & 16383;
+  return crc;
 }
 
-module.exports = crc16;
+function calcSlot(key) {
+  var s = key.indexOf('{');
+  if (s !== -1) {
+    var e = key.indexOf('}', s + 2);
+    if (e !== -1) {
+      key = key.slice(s + 1, e);
+    }
+  }
+  return crc16(key) & 16383;
+}
+
+module.exports = calcSlot;
