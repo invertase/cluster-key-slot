@@ -2,25 +2,36 @@ var Benchmark = require('benchmark');
 var suite = new Benchmark.Suite();
 var oldGenerate = require('./old');
 var newGenerate = require('../lib');
-
-// noinspection SpellCheckingInspection
-var tests = {
-  123465: 1492,
-  foobar: 12325,
-  abcdefghijklmnopqrstuvwxyz: 9132,
-  'gsdfhan$%^&*(sdgsdnhshcs': 15532
-};
+var elems = ['123465', 'foobar', 'abcdefghijklmnopqrstuvwxyz', 'gsdfhan$%^&*(sdgsdnhshcs', 'foobar{foobar'];
 /* eslint func-names: 0 */
 
 // add listeners
-
-
-suite.add('NEW', function () {
-  newGenerate('abcdefghijklmnopqrstuvwxyz');
+suite.add('NEW tags', function () {
+  var i = 0;
+  for (; i < elems.length; i++) {
+    newGenerate('abc{' + elems[i] + '}}{yeahh}');
+  }
 });
 
-suite.add('OLD', function () {
-  oldGenerate('abcdefghijklmnopqrstuvwxyz');
+suite.add('OLD tags', function () {
+  var i = 0;
+  for (; i < elems.length; i++) {
+    oldGenerate('abc{' + elems[i] + '}}{yeahh}');
+  }
+});
+
+suite.add('NEW without tags', function () {
+  var i = 0;
+  for (; i < elems.length; i++) {
+    newGenerate(elems[i]);
+  }
+});
+
+suite.add('OLD without tags', function () {
+  var i = 0;
+  for (; i < elems.length; i++) {
+    oldGenerate(elems[i]);
+  }
 });
 
 suite.on('cycle', function (event) {
