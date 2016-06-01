@@ -14,7 +14,8 @@ var tests = {
   '{foobar}': 12325,
   'h8a9sd{foobar}}{asd}}': 12325,
   '{foobar': 16235,
-  'foobar{}': 4435
+  'foobar{}': 4435,
+  '{{foobar}': 16235
 };
 
 var testsMulti = [
