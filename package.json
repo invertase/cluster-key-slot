@@ -1,6 +1,6 @@
 {
   "name": "cluster-key-slot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generates CRC hashes for strings - for use by node redis clients to determine key slots.",
   "main": "lib/index.js",
   "scripts": {
