@@ -4,10 +4,9 @@
   "description": "Generates CRC hashes for strings - for use by node redis clients to determine key slots.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha",
     "benchmark": "node ./benchmark",
     "posttest": "eslint lib && npm run coverage && npm run coverage:check",
-    "coverage": "node ./node_modules/istanbul/lib/cli.js cover --preserve-comments ./node_modules/mocha/bin/_mocha -- -R spec",
+    "test": "node ./node_modules/istanbul/lib/cli.js cover --preserve-comments ./node_modules/mocha/bin/_mocha -- -R spec",
     "coverage:check": "node ./node_modules/istanbul/lib/cli.js check-coverage --branch 100 --statement 100"
   },
   "repository": {
