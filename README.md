@@ -7,7 +7,7 @@
 
 # cluster-key-slot
 
-A high performance cluster key slot calculator for node redis client e.g. [node_redis](https://github.com/NodeRedis/node_redis) and [ioredis](https://github.com/luin/ioredis).
+A high performance cluster key slot calculator for node redis clients e.g. [node_redis](https://github.com/NodeRedis/node_redis) and [ioredis](https://github.com/luin/ioredis).
 
 This also handles key tags such as `somekey{actualTag}`.
 
@@ -39,3 +39,9 @@ const slotForRedisMulti = calculateSlot([
   'example:key46:{butOnlyThis}foobar',
 ]);
 ```
+
+## Benchmarks
+
+`OLD` in these benchmarks refers to the `ioredis` crc calc and many of the other calculators that use `Buffer`.
+
+![](https://files.gitter.im/gosquared/redis-clustr/x8m8/blob)
