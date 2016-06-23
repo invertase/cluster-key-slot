@@ -15,7 +15,13 @@ var tests = {
   'h8a9sd{foobar}}{asd}}': 12325,
   '{foobar': 16235,
   'foobar{}': 4435,
-  '{{foobar}': 16235
+  '{{foobar}': 16235,
+  'éêe': 13690,
+  'àâa': 3872,
+  '漢字': 14191,
+  '汉字': 16196,
+  '호텔': 4350,
+  '\uD800\uDC00': 11620 // surrogate pair
 };
 
 var testsMulti = [
