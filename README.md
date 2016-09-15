@@ -17,7 +17,7 @@ This also handles key tags such as `somekey{actualTag}`.
 Install with [NPM](https://npmjs.org/):
 
 ```
-npm install cluster-key-slot
+npm install cluster-key-slot --save
 ```
 
 ## Usage
