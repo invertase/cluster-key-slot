@@ -34,7 +34,7 @@ const slot = calculateSlot('test:key:{butOnlyThis}redis');
 // multiple keys - multi returns a single key slot number, returns -1 if any
 // of the keys does not match the base slot number (base is defaulted to first keys slot)
 // This is useful to quickly determine a singe slot for multi keys operations.
-const slotForRedisMulti = calculateSlot([
+const slotForRedisMulti = calculateMultipleSlots([
   'test:key:{butOnlyThis}redis',
   'something:key45:{butOnlyThis}hello',
   'example:key46:{butOnlyThis}foobar',
