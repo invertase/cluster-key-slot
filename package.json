@@ -1,6 +1,6 @@
 {
   "name": "cluster-key-slot",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Generates CRC hashes for strings - for use by node redis clients to determine key slots.",
   "main": "lib/index.js",
   "scripts": {
@@ -32,18 +32,18 @@
     "benchmark": "^2.1.0",
     "codeclimate-test-reporter": "^0.3.1",
     "coveralls": "^2.11.9",
-    "eslint": "^2.10.2",
-    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb-base": "^7.1.0",
     "eslint-plugin-import": "^1.8.0",
     "istanbul": "^0.4.0",
-    "mocha": "^2.3.2"
+    "mocha": "^3.0.2"
   },
   "author": "Mike Diarmid",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeRedis/cluster-key-slot/issues"
+    "url": "https://github.com/Salakar/cluster-key-slot/issues"
   },
-  "homepage": "https://github.com/NodeRedis/cluster-key-slot#readme",
+  "homepage": "https://github.com/Salakar/cluster-key-slot#readme",
   "directories": {
     "test": "test",
     "lib": "lib"
