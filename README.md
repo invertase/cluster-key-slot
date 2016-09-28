@@ -1,14 +1,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/Salakar/cluster-key-slot/badge.svg?branch=master)](https://coveralls.io/github/Salakar/cluster-key-slot?branch=master)
 ![Downloads](https://img.shields.io/npm/dt/cluster-key-slot.svg)
 [![npm version](https://img.shields.io/npm/v/cluster-key-slot.svg)](https://www.npmjs.com/package/cluster-key-slot)
-[![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000)](https://github.com/Salakar/cluster-key-slot)
 [![dependencies](https://img.shields.io/david/Salakar/cluster-key-slot.svg)](https://david-dm.org/Salakar/cluster-key-slot)
-[![build](https://travis-ci.org/Salakar/cluster-key-slot.svg)](https://travis-ci.org/Salakar/cluster-key-slot)
 [![License](https://img.shields.io/npm/l/cluster-key-slot.svg)](/LICENSE)
 
-# cluster-key-slot
+# Redis Key Slot Calculator
 
-A high performance cluster key slot calculator for node redis clients e.g. [node_redis](https://github.com/NodeRedis/node_redis) and [ioredis](https://github.com/luin/ioredis).
+A high performance redis cluster key slot calculator for node redis clients e.g. [node_redis](https://github.com/NodeRedis/node_redis), [ioredis](https://github.com/luin/ioredis) and [redis-clustr](https://github.com/gosquared/redis-clustr/).
 
 This also handles key tags such as `somekey{actualTag}`.
 
