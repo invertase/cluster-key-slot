@@ -3,6 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/cluster-key-slot.svg)](https://www.npmjs.com/package/cluster-key-slot)
 [![dependencies](https://img.shields.io/david/Salakar/cluster-key-slot.svg)](https://david-dm.org/Salakar/cluster-key-slot)
 [![License](https://img.shields.io/npm/l/cluster-key-slot.svg)](/LICENSE)
+[![Donate](https://img.shields.io/badge/Donate-Patreon-green.svg)](https://www.patreon.com/invertase)
 
 # Redis Key Slot Calculator
 
