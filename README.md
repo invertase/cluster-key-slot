@@ -1,7 +1,7 @@
-[![Coverage Status](https://coveralls.io/repos/github/salakar/cluster-key-slot/badge.svg?branch=master)](https://coveralls.io/github/salakar/cluster-key-slot?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Salakar/cluster-key-slot/badge.svg?branch=master)](https://coveralls.io/github/Salakar/cluster-key-slot?branch=master)
 ![Downloads](https://img.shields.io/npm/dt/cluster-key-slot.svg)
 [![npm version](https://img.shields.io/npm/v/cluster-key-slot.svg)](https://www.npmjs.com/package/cluster-key-slot)
-[![dependencies](https://img.shields.io/david/salakar/cluster-key-slot.svg)](https://david-dm.org/salakar/cluster-key-slot)
+[![dependencies](https://img.shields.io/david/Salakar/cluster-key-slot.svg)](https://david-dm.org/Salakar/cluster-key-slot)
 [![License](https://img.shields.io/npm/l/cluster-key-slot.svg)](/LICENSE)
 
 # Redis Key Slot Calculator
