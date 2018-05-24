@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/invertase/cluster-key-slot.git"
+    "url": "git+https://github.com/Salakar/cluster-key-slot.git"
   },
   "keywords": [
     "redis",
@@ -38,12 +38,16 @@
     "istanbul": "^0.4.0",
     "mocha": "^3.0.2"
   },
-  "author": "Mike Diarmid",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/invertase/cluster-key-slot/issues"
+  "author": {
+    "name": "Mike Diarmid",
+    "email": "mike.diarmid@gmail.com",
+    "url": "http://github.com/Salakar/"
   },
-  "homepage": "https://github.com/invertase/cluster-key-slot#readme",
+  "license": "APACHE-2.0",
+  "bugs": {
+    "url": "https://github.com/Salakar/cluster-key-slot/issues"
+  },
+  "homepage": "https://github.com/Salakar/cluster-key-slot#readme",
   "directories": {
     "test": "test",
     "lib": "lib"
