@@ -29,6 +29,8 @@ const calculateMultipleSlots = require('cluster-key-slot').generateMulti;
 
 // a single slot number
 const slot = calculateSlot('test:key:{butOnlyThis}redis');
+// Buffer is also supported
+const anotherSlot = calculateSlot(Buffer.from([0x7b, 0x7d, 0x2a]));
 
 // multiple keys - multi returns a single key slot number, returns -1 if any
 // of the keys does not match the base slot number (base is defaulted to first keys slot)
