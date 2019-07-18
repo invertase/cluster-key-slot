@@ -47,11 +47,15 @@ const slotForRedisMulti = calculateMultipleSlots([
 `OLD` in these benchmarks refers to the `ioredis` crc calc and many of the other calculators that use `Buffer`.
 
 ```text
-NEW tags x 472,156 ops/sec ±1.80% (90 runs sampled)
-OLD tags x 413,725 ops/sec ±1.37% (93 runs sampled)
-NEW without tags x 1,287,795 ops/sec ±2.06% (89 runs sampled)
-OLD without tags x 633,340 ops/sec ±0.87% (93 runs sampled)
-NEW without tags singular x 4,824,560 ops/sec ±1.71% (93 runs sampled)
-OLD without tags singular x 2,981,057 ops/sec ±0.22% (96 runs sampled)
+node -v                                                                                                                                                                                                ✔  16.38G RAM  10:29:07
+v10.15.3
+
+NEW tags x 721,445 ops/sec ±0.44% (90 runs sampled)
+OLD tags x 566,777 ops/sec ±0.97% (96 runs sampled)
+NEW without tags x 2,054,845 ops/sec ±1.77% (92 runs sampled)
+OLD without tags x 865,839 ops/sec ±0.43% (96 runs sampled)
+NEW without tags singular x 6,354,097 ops/sec ±1.25% (94 runs sampled)
+OLD without tags singular x 4,012,250 ops/sec ±0.96% (94 runs sampled)
+NEW tags (Buffer) x 552,346 ops/sec ±1.35% (92 runs sampled)
 ```
 
