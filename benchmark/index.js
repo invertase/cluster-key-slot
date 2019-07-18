@@ -42,6 +42,13 @@ suite.add('OLD without tags singular', function () {
   oldGenerate(elems[2]);
 });
 
+suite.add('NEW tags (Buffer)', function () {
+  var i = 0;
+  for (; i < elems.length; i++) {
+    newGenerate(Buffer.from('abc{' + elems[i] + '}}{yeahh}'));
+  }
+});
+
 suite.on('cycle', function (event) {
   console.log(String(event.target));
 });

@@ -5,25 +5,29 @@ var assert = require('assert');
 var generate = require('../lib');
 var generateMulti = require('../lib').generateMulti;
 
-var tests = {
-  123465: 1492,
-  foobar: 12325,
-  abcdefghijklmnopqrstuvwxyz: 9132,
-  'gsdfhan$%^&*(sdgsdnhshcs': 15532,
-  'abc{foobar}': 12325,
-  '{foobar}': 12325,
-  'h8a9sd{foobar}}{asd}}': 12325,
-  '{foobar': 16235,
-  'foobar{}': 4435,
-  '{{foobar}': 16235,
-  'éêe': 13690,
-  'àâa': 3872,
-  '漢字': 14191,
-  '汉字': 16196,
-  '호텔': 4350,
-  '\uD83D\uDC80': 9284,
-  '\uD800\uDC00': 11620 // surrogate pair
-};
+var tests = [
+  ['123465', 1492],
+  ['foobar', 12325],
+  ['abcdefghijklmnopqrstuvwxyz', 9132],
+  ['gsdfhan$%^&*(sdgsdnhshcs', 15532],
+  ['abc{foobar}', 12325],
+  ['{foobar}', 12325],
+  ['h8a9sd{foobar}}{asd}}', 12325],
+  ['{foobar', 16235],
+  ['foobar{}', 4435],
+  ['{{foobar}', 16235],
+  ['éêe', 13690],
+  ['àâa', 3872],
+  ['漢字', 14191],
+  ['汉字', 16196],
+  ['호텔', 4350],
+  ['\uD83D\uDC80', 9284],
+  ['\uD800\uDC00', 11620], // surrogate pair
+  ['{}foobar', 14573],
+  [Buffer.from([0x7b, 0x7d, 0x2a, 0x2]), 3932],
+  [Buffer.from([0x7b, 0x2a, 0x7d, 0x2]), 1320],
+  [Buffer.from('汉字'), 16196]
+];
 
 var testsMulti = [
   'abcdefghijklmnopqrstuvwxyz',
@@ -38,13 +42,13 @@ var testsMulti = [
 
 var testsMultiResult = 9132;
 
-function assertHash(string) {
-  assert.strictEqual(generate(string), tests[string], string + ' - generated invalid hash: ' + generate(string));
+function assertHash(key, expectedSlot) {
+  assert.strictEqual(generate(key), expectedSlot, key + ' - generated invalid hash: ' + generate(key));
 }
 
 describe('single hash: generate()', function () {
   it('generate a correct hash from string', function () {
-    Object.keys(tests).forEach(assertHash);
+    tests.forEach(([key, expectedSlot]) => assertHash(key, expectedSlot))
   });
 });
 
