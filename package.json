@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "Generates CRC hashes for strings - for use by node redis clients to determine key slots.",
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "benchmark": "node ./benchmark",
     "posttest": "eslint ./lib && npm run coveralls",
